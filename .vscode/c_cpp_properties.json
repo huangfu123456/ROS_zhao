@@ -1,0 +1,37 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/huang/catkin_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/huang/catkin_ws/src/atr_pkg/include/**",
+        "/home/huang/catkin_ws/src/cv_pkg/include/**",
+        "/home/huang/catkin_ws/src/imu_pkg/include/**",
+        "/home/huang/catkin_ws/src/lidar_pkg/include/**",
+        "/home/huang/catkin_ws/src/map_pkg/include/**",
+        "/home/huang/catkin_ws/src/nav_pkg/include/**",
+        "/home/huang/catkin_ws/src/qq_msgs/include/**",
+        "/home/huang/catkin_ws/src/slam_pkg/include/**",
+        "/home/huang/catkin_ws/src/ssr_pkg/include/**",
+        "/home/huang/catkin_ws/src/turtle_vel_ctrl_pkg/include/**",
+        "/home/huang/catkin_ws/src/vel_pkg/include/**",
+        "/home/huang/catkin_ws/src/waterplus_map_tools/include/**",
+        "/home/huang/catkin_ws/src/wpb_home/wpb_home_bringup/include/**",
+        "/home/huang/catkin_ws/src/wpb_home/wpb_home_tutorials/include/**",
+        "/home/huang/catkin_ws/src/wpb_home/wpbh_local_planner/include/**",
+        "/home/huang/catkin_ws/src/wpr_simulation/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
