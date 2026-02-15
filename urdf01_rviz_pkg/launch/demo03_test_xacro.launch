@@ -1,0 +1,15 @@
+<launch>
+    <!-- 加载robot_description时使用command属性，属性值就是调用 xacro 功能包的 xacro 程序直接解析 xacro 文件,将生成的urdf文件内容设置进参数服务器 -->
+    <param name="robot_description" command="$(find xacro)/xacro $(find urdf01_rviz_pkg)/urdf/xacro/demo01_test.urdf.xacro" />
+
+    <!-- 启动 rivz -->
+    <node pkg="rviz" type="rviz" name="rviz_test" args="-d $(find urdf01_rviz_pkg)/config/rviz/show_mycar.rviz" />
+
+    <!-- 启动机器人状态和关节状态发布节点 -->
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" />
+    <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher" />
+
+    <!-- 启动图形化的控制关节运动节点 -->
+    <node pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" name="joint_state_publisher_gui" />
+
+</launch>
