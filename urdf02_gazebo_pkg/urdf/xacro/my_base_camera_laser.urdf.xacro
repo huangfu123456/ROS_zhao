@@ -2,11 +2,13 @@
 <robot name="my_car_camera_laser" xmlns:xacro="http://wiki.ros.org/xacro">
     <!-- 包含惯性矩阵文件 -->
     <xacro:include filename="head.xacro" />
+
     <!-- 包含底盘，摄像头与雷达的xacro文件 -->
     <xacro:include filename="demo02_car_base.urdf.xacro" />
     <xacro:include filename="demo02_car_camera.urdf.xacro" />
     <xacro:include filename="demo02_car_laser.urdf.xacro" />
 
-
+    <!-- 为机器人模型添加传动装置以及控制器 -->
+    <xacro:include filename="$(find urdf02_gazebo_pkg)/urdf/gazebo/move.xacro" />
     
 </robot>
