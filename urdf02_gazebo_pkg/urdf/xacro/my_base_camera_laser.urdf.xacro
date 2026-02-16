@@ -11,4 +11,7 @@
     <!-- 为机器人模型添加传动装置以及控制器 -->
     <xacro:include filename="$(find urdf02_gazebo_pkg)/urdf/gazebo/move.xacro" />
     
+    <!-- 集成雷达的配置文件 -->
+    <xacro:include filename="$(find urdf02_gazebo_pkg)/urdf/gazebo/laser.xacro" />
+
 </robot>

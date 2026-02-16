@@ -1,0 +1,12 @@
+<launch>
+
+    <!-- 启动 rivz -->
+    <node pkg="rviz" type="rviz" name="rviz_test" args="-d $(find urdf01_rviz_pkg)/config/rviz/show_mycar.rviz" />
+
+    <!-- 启动关节状态状态发布节点,发布机器人关节状态数据（sensor_msgs/JointState 消息），包括关节名称、位置（角度/位移）、速度等。 -->
+    <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher" />
+    <!-- 启动机器人状态发布节点,订阅 /joint_states 话题，结合机器人描述文件（URDF或SRDF）中的运动学信息，计算各个连杆坐标系之间的变换关系，并通过 /tf 话题发布这些坐标变换。-->
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" />
+    
+
+</launch>
